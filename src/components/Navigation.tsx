@@ -42,10 +42,16 @@ const Navigation = () => {
 export const ScrollIndicator = () => (
   <button
     onClick={() => document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" })}
-    className="absolute bottom-24 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-foreground transition-colors animate-bounce"
+    className="absolute bottom-16 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground hover:text-accent transition-colors group"
     aria-label="Scroll down"
   >
-    <ChevronDown className="w-6 h-6" />
+    <span className="text-sm font-medium tracking-widest uppercase opacity-60 group-hover:opacity-100 transition-opacity">
+      Explore
+    </span>
+    <div className="flex flex-col items-center animate-bounce">
+      <ChevronDown className="w-5 h-5" />
+      <ChevronDown className="w-5 h-5 -mt-3 opacity-50" />
+    </div>
   </button>
 );
 
