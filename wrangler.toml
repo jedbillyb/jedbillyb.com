@@ -1,0 +1,19 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "jedbillyb-com"
+type = "javascript"
+account_id = ""
+workers_dev = false
+main = "dist/index.html"
+site = { bucket = "./dist" }
+
+[build]
+command = "npm run build"
+cwd = "./"
+watch_paths = ["src/**/*.ts", "src/**/*.tsx"]
+
+[build.upload]
+format = "service-worker"
+
+[env.production]
+route = ""
+zone_id = ""
