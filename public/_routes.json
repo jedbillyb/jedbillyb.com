@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "description": "SPA routing configuration for Cloudflare Pages",
+  "include": ["/*"],
+  "exclude": ["/assets/*", "/og-image.svg", "/favicon.ico", "/robots.txt"]
+}
