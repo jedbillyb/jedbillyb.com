@@ -1,4 +1,5 @@
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
+import { useState, useEffect } from "react";
 
 interface NavItem {
   label: string;
@@ -12,28 +13,67 @@ const navItems: NavItem[] = [
 ];
 
 const Navigation = () => {
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth >= 768) setOpen(false);
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+    setOpen(false);
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4">
-      <div className="max-w-6xl mx-auto flex justify-center">
-        <ul className="flex items-center gap-8 bg-card/30 backdrop-blur-md border border-border/30 rounded-full px-8 py-3">
-          {navItems.map((item) => (
-            <li key={item.label}>
+    <nav className="fixed top-0 left-0 right-0 z-50 px-4 py-3">
+      <div className="max-w-6xl mx-auto flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          <button
+            aria-label="Toggle menu"
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+            className="md:hidden p-2 rounded-md text-muted-foreground hover:text-foreground transition-colors"
+          >
+            {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+          <div className="hidden md:flex items-center gap-8 bg-card/30 backdrop-blur-md border border-border/30 rounded-full px-6 py-2">
+            {navItems.map((item) => (
               <button
+                key={item.label}
                 onClick={() => scrollToSection(item.href)}
                 className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
               >
                 {item.label}
               </button>
-            </li>
-          ))}
-        </ul>
+            ))}
+          </div>
+        </div>
+
+        {/* Mobile menu */}
+        <div
+          className={`absolute left-4 right-4 top-16 bg-card/60 backdrop-blur-md border border-border/30 rounded-xl p-4 shadow-lg md:hidden ${open ? "block" : "hidden"}`}
+          role="menu"
+        >
+          <ul className="flex flex-col gap-3">
+            {navItems.map((item) => (
+              <li key={item.label}>
+                <button
+                  onClick={() => scrollToSection(item.href)}
+                  className="w-full text-left px-3 py-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted/10 transition-colors text-base font-medium"
+                >
+                  {item.label}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </nav>
   );

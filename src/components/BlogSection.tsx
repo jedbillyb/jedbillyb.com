@@ -1,6 +1,9 @@
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
+import { posts } from "@/data/posts";
+import heroBg from "@/assets/hero-bg.jpg";
 
 interface BlogPost {
   id: string;
@@ -11,35 +14,11 @@ interface BlogPost {
   tags: string[];
 }
 
-const posts: BlogPost[] = [
-  {
-    id: "1",
-    title: "Getting Started with Algorithmic Trading",
-    excerpt: "A beginner's guide to understanding and implementing basic trading algorithms using Python and popular financial APIs.",
-    date: "Dec 1, 2024",
-    readTime: "8 min read",
-    tags: ["Trading", "Python", "Finance"],
-  },
-  {
-    id: "2",
-    title: "Building a Real-Time Stock Dashboard",
-    excerpt: "How I built a real-time stock tracking dashboard using React, WebSockets, and the Alpha Vantage API.",
-    date: "Nov 20, 2024",
-    readTime: "12 min read",
-    tags: ["React", "WebSockets", "Tutorial"],
-  },
-  {
-    id: "3",
-    title: "My Journey Into Stock Trading",
-    excerpt: "Reflections on my first year as a retail investor - lessons learned, mistakes made, and strategies that worked.",
-    date: "Nov 5, 2024",
-    readTime: "6 min read",
-    tags: ["Personal", "Investing"],
-  },
-];
+// posts imported from shared data
 
 const BlogCard = ({ post }: { post: BlogPost }) => (
-  <Card className="bg-card/50 border-border/50 backdrop-blur-sm hover:border-accent/50 transition-all duration-300 group cursor-pointer">
+  <Card className="bg-card/50 border-border/50 backdrop-blur-sm hover:border-accent/50 transition-all duration-300 group cursor-pointer min-h-[180px] card-hover">
+    <div className="card-image rounded-t-md" style={{ backgroundImage: `url(${heroBg})` }} role="img" aria-label={`${post.title} thumbnail`} />
     <CardHeader>
       <div className="flex items-center gap-4 text-xs text-muted-foreground mb-2">
         <span className="flex items-center gap-1">
@@ -87,7 +66,9 @@ const BlogSection = () => {
         </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {posts.map((post) => (
-            <BlogCard key={post.id} post={post} />
+            <Link key={post.id} to={`/blog/${post.id}`} className="block">
+              <BlogCard post={post} />
+            </Link>
           ))}
         </div>
       </div>

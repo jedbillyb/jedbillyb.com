@@ -61,7 +61,7 @@ const Index = () => {
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center justify-center px-6 text-center">
           <header className="mb-8">
-            <h1 className="text-5xl md:text-7xl font-heading font-semibold text-foreground tracking-tight fade-in text-glow">
+            <h1 className="text-4xl md:text-7xl font-heading font-semibold text-foreground tracking-tight fade-in text-glow">
               Jed Blenkhorn
             </h1>
             <p className="mt-4 text-lg md:text-xl text-muted-foreground font-body tracking-wide fade-in-delay-1">
@@ -84,6 +84,16 @@ const Index = () => {
               ))}
             </ul>
           </nav>
+
+          {/* CTA Button */}
+          <div className="mt-8 fade-in-delay-3">
+            <button
+              onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
+              className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-accent text-accent-foreground font-medium shadow-md hover:brightness-95 focus-visible:outline-none"
+            >
+              Explore Projects
+            </button>
+          </div>
         </div>
 
         <ScrollIndicator />
