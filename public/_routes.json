@@ -1,6 +1,5 @@
 {
   "version": 1,
-  "description": "SPA routing - serve index.html for all routes except static assets",
   "include": ["/*"],
-  "exclude": ["/assets/*", "/*.ico", "/*.svg", "/*.txt", "/*.json"]
+  "exclude": ["/assets/*", "/*.{js,css,png,jpg,jpeg,gif,svg,ico,woff,woff2,ttf,eot,txt}"]
 }
