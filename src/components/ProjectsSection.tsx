@@ -1,4 +1,5 @@
 import { Github, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -67,16 +68,27 @@ const ProjectCard = ({ project }: { project: Project }) => (
             </a>
           )}
           {project.live && (
-            <a
-              href={project.live}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-accent transition-colors z-10"
-              aria-label={`View ${project.title} live`}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <ExternalLink className="w-5 h-5" />
-            </a>
+            project.live === "#" ? (
+              <Link
+                to="/"
+                className="text-muted-foreground hover:text-accent transition-colors z-10"
+                aria-label={`View ${project.title} live`}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <ExternalLink className="w-5 h-5" />
+              </Link>
+            ) : (
+              <a
+                href={project.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-accent transition-colors z-10"
+                aria-label={`View ${project.title} live`}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <ExternalLink className="w-5 h-5" />
+              </a>
+            )
           )}
         </div>
       </div>
