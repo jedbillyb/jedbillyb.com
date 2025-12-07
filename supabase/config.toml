@@ -1,4 +1,0 @@
-project_id = "qwyrhrmcxwvypzkfwukj"
-
-[functions.stock-prices]
-verify_jwt = false
