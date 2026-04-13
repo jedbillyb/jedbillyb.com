@@ -1,112 +1,138 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-<title>Jed Blenkhorn | Student • Developer • Stockbroker</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="assets/css/main.css" />
-<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0HF8W9QZZ9"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-0HF8W9QZZ9');
-</script>
-<style>
-  #featured-project {
-    margin-top: 1.5em;
-    font-size: 0.85em;
-  }
-  #featured-project a {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5em;
-    color: rgba(255,255,255,0.6);
-    text-decoration: none;
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 2em;
-    padding: 0.45em 1em;
-    transition: color 0.2s, border-color 0.2s;
-    letter-spacing: 0.05em;
-  }
-  #featured-project a:hover {
-    color: #fff;
-    border-color: rgba(255,255,255,0.45);
-  }
-  #featured-project a::before {
-    content: '→';
-    margin-right: 0.2em;
-  }
-</style>
-</head>
-<body class="is-preload">
-<div id="wrapper">
-<div id="bg"></div>
-<div id="overlay"></div>
-<div id="main">
-<!-- Header -->
-<header id="header">
-<h1>Jed Blenkhorn</h1>
-<p>Student &nbsp;&bull;&nbsp; Developer &nbsp;&bull;&nbsp; Stockbroker</p>
+    <head>
+        <title>Jed Blenkhorn | Student • Developer • Stockbroker</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-<!-- Featured project -->
-<div id="featured-project">
-  <a href="https://vehiclefinder.co.nz/" target="_blank" rel="noopener">vehiclefinder.co.nz — search NZ's vehicle register</a>
-</div>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-0HF8W9QZZ9"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-0HF8W9QZZ9');
+        </script>
 
-<nav>
-<ul class="social-icons">
-<li>
-<a href="https://discord.com/users/1477479500362158121" target="_blank" aria-label="Discord">
-<i class="fab fa-discord"></i>
-<span>Discord</span>
-</a>
-</li>
-<li>
-<a href="https://www.instagram.com/jedbillyb/" target="_blank" aria-label="Instagram">
-<i class="fab fa-instagram"></i>
-<span>Instagram</span>
-</a>
-</li>
-<li>
-<a href="mailto:hello@jedbillyb.com" aria-label="Gmail">
-<i class="fas fa-envelope"></i>
-<span>Gmail</span>
-</a>
-</li>
-<li>
-<a href="https://github.com/jedbillyb" target="_blank" aria-label="GitHub">
-<i class="fab fa-github"></i>
-<span>GitHub</span>
-</a>
-</li>
-<li>
-<a href="https://x.com/jedbillyb09" target="_blank" aria-label="X">
-<i class="icon-x-custom"></i>
-<span>X</span>
-</a>
-</li>
-<li>
-<a href="https://www.linkedin.com/in/jed-blenkhorn" target="_blank" aria-label="LinkedIn">
-<i class="fab fa-linkedin"></i>
-<span>LinkedIn</span>
-</a>
-</li>
-</ul>
-</nav>
-</header>
-<!-- Footer -->
-<footer id="footer">
-<span class="copyright">&copy; Jed Blenkhorn 2026</span>
-</footer>
-</div>
-</div>
-<script>
-window.onload = function() { document.body.classList.remove('is-preload'); }
-window.ontouchmove = function() { return false; }
-window.onorientationchange = function() { document.body.scrollTop = 0; }
-</script>
-</body>
+        <style>
+            #featured-project {
+                margin-top: 1.75em;
+            }
+
+            #featured-project a {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.6em;
+                color: rgba(255, 255, 255, 0.55);
+                text-decoration: none;
+                font-size: 0.8em;
+                letter-spacing: 0.08em;
+                border: 1px solid rgba(255, 255, 255, 0.12);
+                border-radius: 2em;
+                padding: 0.5em 1.1em;
+                transition: color 0.25s, border-color 0.25s, background 0.25s;
+            }
+
+            #featured-project a:hover {
+                color: #fff;
+                border-color: rgba(255, 255, 255, 0.4);
+                background: rgba(255, 255, 255, 0.05);
+            }
+
+            #featured-project a svg {
+                width: 0.85em;
+                height: 0.85em;
+                flex-shrink: 0;
+                opacity: 0.7;
+                transition: opacity 0.25s, transform 0.25s;
+            }
+
+            #featured-project a:hover svg {
+                opacity: 1;
+                transform: translate(2px, -2px);
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+        <div id="wrapper">
+            <div id="bg"></div>
+            <div id="overlay"></div>
+            <div id="main">
+
+                <!-- Header -->
+                <header id="header">
+                    <h1>Jed Blenkhorn</h1>
+                    <p>Student &nbsp;&bull;&nbsp; Developer &nbsp;&bull;&nbsp; Stockbroker</p>
+
+                    <nav>
+                        <ul class="social-icons">
+                            <li>
+                                <a href="https://discord.com/users/1477479500362158121" target="_blank" aria-label="Discord">
+                                    <i class="fab fa-discord"></i>
+                                    <span>Discord</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/jedbillyb/" target="_blank" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:hello@jedbillyb.com" aria-label="Gmail">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Gmail</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/jedbillyb" target="_blank" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://x.com/jedbillyb09" target="_blank" aria-label="X">
+                                    <i class="icon-x-custom"></i>
+                                    <span>X</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/jed-blenkhorn" target="_blank" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <!-- Featured project -->
+                    <div id="featured-project">
+                        <a href="https://vehiclefinder.co.nz/" target="_blank" rel="noopener">
+                            <!-- External link icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                <polyline points="15 3 21 3 21 9"/>
+                                <line x1="10" y1="14" x2="21" y2="3"/>
+                            </svg>
+                            vehiclefinder.co.nz
+                        </a>
+                    </div>
+                </header>
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <span class="copyright">&copy; Jed Blenkhorn 2026</span>
+                </footer>
+
+            </div>
+        </div>
+
+        <script>
+            window.onload = function() { document.body.classList.remove('is-preload'); }
+            window.ontouchmove = function() { return false; }
+            window.onorientationchange = function() { document.body.scrollTop = 0; }
+        </script>
+    </body>
 </html>
