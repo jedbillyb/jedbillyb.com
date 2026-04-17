@@ -16,6 +16,16 @@
             gtag('config', 'G-0HF8W9QZZ9');
         </script>
 
+        <!-- PostHog -->
+        <script>
+            !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Dr qr Ci Br Zr Pr capture calculateEventProperties Ur register register_once register_for_session unregister unregister_for_session Xr getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync Jr identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty Gr Hr createPersonProfile setInternalOrTestUser Wr Fr tn opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing $r debug ki Yr getPageViewId captureTraceFeedback captureTraceMetric Rr".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+            posthog.init('phc_nbCGiMMWcHzuYmwUguVh8R6VSZiJwqnNvTGa26sbPawX', {
+                api_host: 'https://us.i.posthog.com',
+                defaults: '2026-01-30',
+                person_profiles: 'identified_only',
+            })
+        </script>
+
         <style>
             #featured-project {
                 margin-top: 1.75em;
@@ -62,6 +72,13 @@
                 transform: translate(2px, -2px);
             }
         </style>
+        <script>
+            function trackPosthogClick(eventName, properties) {
+                if (window.posthog && typeof window.posthog.capture === "function") {
+                    window.posthog.capture(eventName, properties || {});
+                }
+            }
+        </script>
     </head>
     <body class="is-preload">
         <div id="wrapper">
@@ -77,37 +94,37 @@
                     <nav>
                         <ul class="social-icons">
                             <li>
-                                <a href="https://discord.com/users/1477479500362158121" target="_blank" aria-label="Discord">
+                                <a href="https://discord.com/users/1477479500362158121" target="_blank" aria-label="Discord" onclick="trackPosthogClick('social_link_clicked', { location: 'header', network: 'discord' })">
                                     <i class="fab fa-discord"></i>
                                     <span>Discord</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.instagram.com/jedbillyb/" target="_blank" aria-label="Instagram">
+                                <a href="https://www.instagram.com/jedbillyb/" target="_blank" aria-label="Instagram" onclick="trackPosthogClick('social_link_clicked', { location: 'header', network: 'instagram' })">
                                     <i class="fab fa-instagram"></i>
                                     <span>Instagram</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="mailto:hello@jedbillyb.com" aria-label="Gmail">
+                                <a href="mailto:hello@jedbillyb.com" aria-label="Gmail" onclick="trackPosthogClick('social_link_clicked', { location: 'header', network: 'email' })">
                                     <i class="fas fa-envelope"></i>
                                     <span>Gmail</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/jedbillyb" target="_blank" aria-label="GitHub">
+                                <a href="https://github.com/jedbillyb" target="_blank" aria-label="GitHub" onclick="trackPosthogClick('social_link_clicked', { location: 'header', network: 'github' })">
                                     <i class="fab fa-github"></i>
                                     <span>GitHub</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://x.com/jedbillyb09" target="_blank" aria-label="X">
+                                <a href="https://x.com/jedbillyb09" target="_blank" aria-label="X" onclick="trackPosthogClick('social_link_clicked', { location: 'header', network: 'x' })">
                                     <i class="icon-x-custom"></i>
                                     <span>X</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.linkedin.com/in/jed-blenkhorn" target="_blank" aria-label="LinkedIn">
+                                <a href="https://www.linkedin.com/in/jed-blenkhorn" target="_blank" aria-label="LinkedIn" onclick="trackPosthogClick('social_link_clicked', { location: 'header', network: 'linkedin' })">
                                     <i class="fab fa-linkedin"></i>
                                     <span>LinkedIn</span>
                                 </a>
@@ -117,7 +134,7 @@
 
                     <!-- Featured project -->
                     <div id="featured-project">
-                        <a href="https://vehiclefinder.co.nz/" target="_blank" rel="noopener">
+                        <a href="https://vehiclefinder.co.nz/" target="_blank" rel="noopener" onclick="trackPosthogClick('project_link_clicked', { location: 'featured_project', href: 'https://vehiclefinder.co.nz/' })">
                             <!-- External link icon -->
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
