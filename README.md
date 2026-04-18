@@ -19,9 +19,9 @@
 ## Pages
 
 ### [`jedbillyb.com`](https://jedbillyb.com)
-The main landing page. Links to my socials — Discord, Instagram, email, GitHub, and X.
+The main landing page. Links to my socials - Discord, Instagram, email, GitHub, and X.
 
-### [`server.jedbillyb.com/setup`](https://server.jedbillyb.com/setup) — Absolute Server Manifest
+### [`server.jedbillyb.com/setup`](https://server.jedbillyb.com/setup) - Absolute Server Manifest
 A **Terminal Noir** dashboard that visualises the full state of `server.jedbillyb.com` in real time.
 
 | Panel | What it shows |
@@ -73,18 +73,6 @@ jedbillyb.com/
 ├── index.html             # Main landing page
 └── favicon.ico
 ```
-
----
-
-## Links
-
-<div>
-
-[![jedbillyb.com](https://img.shields.io/badge/website-jedbillyb.com-000?style=flat-square&logo=googlechrome)](https://jedbillyb.com)
-[![GitHub](https://img.shields.io/badge/GitHub-jedbillyb-181717?style=flat-square&logo=github)](https://github.com/jedbillyb)
-[![Email](https://img.shields.io/badge/email-hello@jedbillyb.com-ea4335?style=flat-square&logo=gmail)](mailto:hello@jedbillyb.com)
-
-</div>
 
 ---
 
