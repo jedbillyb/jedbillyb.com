@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="favicon.ico" width="64" height="64" alt="favicon" />
+<img src="favicon.ico" width="128" height="128" alt="favicon" />
 
 # jedbillyb.com
 
