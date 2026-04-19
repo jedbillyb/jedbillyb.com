@@ -260,7 +260,7 @@ function Index() {
 
         {/* I. Systemd */}
         <Section index="01" title="Systemd Service Catalog" description="Long-running services managed by systemd.">
-          <div className="grid gap-5 lg:grid-cols-2">
+          <div className="grid items-start gap-5 lg:grid-cols-2">
             {systemdServices.map((s) => (
               <ServiceCard key={s.name} {...s} />
             ))}
@@ -269,7 +269,7 @@ function Index() {
 
         {/* II. PM2 */}
         <Section index="02" title="PM2 & Process Details" description="Node processes supervised by PM2.">
-          <div className="grid gap-5 lg:grid-cols-2">
+          <div className="grid items-start gap-5 lg:grid-cols-2">
             {pm2Services.map((s) => (
               <ServiceCard key={s.name} {...s} />
             ))}
