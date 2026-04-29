@@ -8,7 +8,7 @@ import { StatusBadge } from "@/components/dashboard/StatusBadge";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "server.jedbillyb.com — Absolute Server Manifest" },
+      { title: "server.jedbillyb.com - Absolute Server Manifest" },
       {
         name: "description",
         content:
