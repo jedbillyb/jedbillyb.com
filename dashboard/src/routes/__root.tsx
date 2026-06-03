@@ -29,14 +29,14 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "jedbillyb.com" },
+      { name: "description", content: "Jed Blenkhorn - personal site and server dashboard." },
+      { property: "og:title", content: "jedbillyb.com" },
+      { property: "og:description", content: "Jed Blenkhorn - personal site and server dashboard." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "jedbillyb.com" },
+      { name: "twitter:description", content: "Jed Blenkhorn - personal site and server dashboard." },
     ],
     links: [
       {
