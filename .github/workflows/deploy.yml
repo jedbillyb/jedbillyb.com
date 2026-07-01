@@ -11,7 +11,19 @@ jobs:
       name: Production
       url: https://jedbillyb.com
     steps:
-      - name: Deploy to server
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy landing page (static)
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: server.jedbillyb.com
+          username: ubuntu
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          source: "index.html,favicon.ico,og-image.jpg,assets,extensions"
+          target: "/var/www/html/jedbillyb.com"
+
+      - name: Deploy dashboard
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: server.jedbillyb.com
