@@ -1,4 +1,4 @@
-<p align="right"><a href="https://jedbillyb.com"><img src="https://img.shields.io/badge/jedbillyb.com-000?style=for-the-badge&logo=archlinux&logoColor=blue" /></a></p>
+<a href="https://jedbillyb.com"><img align="right" src="https://img.shields.io/badge/jedbillyb.com-000?style=for-the-badge&logo=archlinux&logoColor=blue" /></a>
 <div align="center">
 
 <img src="favicon.ico" width="64" height="64" alt="favicon" />
