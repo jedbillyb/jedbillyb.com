@@ -1,5 +1,3 @@
-<img align="left" src="assets/spacer.png" width="167" height="28" alt="" />
-<a href="https://jedbillyb.com"><img align="right" src="https://img.shields.io/badge/jedbillyb.com-000?style=for-the-badge&logo=archlinux&logoColor=blue" /></a>
 <div align="center">
 
 <img src="favicon.ico" width="64" height="64" alt="favicon" />
