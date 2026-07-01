@@ -78,7 +78,5 @@ jedbillyb.com/
 ---
 
 <div align="center">
-<sub>MIT © <a href="https://jedbillyb.com">jedbillyb</a></sub>
-<br/>
-<sub>Made with ❤️ by <a href="https://github.com/jedbillyb">jedbillyb</a></sub>
+<sub><a href="./LICENSE">MIT</a> © <a href="https://jedbillyb.com">jedbillyb</a> · Made with ❤️</sub>
 </div>
