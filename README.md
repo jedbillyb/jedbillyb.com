@@ -19,7 +19,7 @@
 ## Pages
 
 ### [`jedbillyb.com`](https://jedbillyb.com)
-The main landing page. Links to my socials - Discord, Instagram, email, GitHub, and X.
+The main landing page. Links to my socials - email, LinkedIn, X, GitHub, Instagram, and Discord.
 
 ### [`server.jedbillyb.com/setup`](https://server.jedbillyb.com/setup) - Absolute Server Manifest
 A **Terminal Noir** dashboard that visualises the full state of `server.jedbillyb.com` in real time.
