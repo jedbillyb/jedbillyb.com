@@ -20,7 +20,7 @@
 
 ## Related
 
-- **[server.jedbillyb.com](https://github.com/jedbillyb/server.jedbillyb.com)** — the server dashboard lives in its own repo.
+- **[server.jedbillyb.com](https://github.com/jedbillyb/server.jedbillyb.com)** - the server dashboard lives in its own repo.
 
 ---
 
