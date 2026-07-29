@@ -15,18 +15,24 @@
 
 ## What's here
 
-- **[`jedbillyb.com`](https://jedbillyb.com)** — the landing page (`index.html`). Links to my socials: email, LinkedIn, X, GitHub, Instagram, and Discord.
-- **[`jedbillyb.com/extensions/desmos-text-io`](https://jedbillyb.com/extensions/desmos-text-io)** — privacy policy for the Desmos Text I/O browser extension (`extensions/desmos-text-io/privacy.html`).
+- **[`jedbillyb.com`](https://jedbillyb.com)** - the landing page (`index.html`). Links to my socials (email, LinkedIn, X, GitHub, Instagram, Discord) plus the things I'm currently pointing people at.
+- **[`jedbillyb.com/extensions/desmos-text-io`](https://jedbillyb.com/extensions/desmos-text-io)** - privacy policy for the Desmos Text I/O browser extension (`extensions/desmos-text-io/privacy.html`).
 
-## Related
+## Elsewhere
 
-- **[server.jedbillyb.com](https://github.com/jedbillyb/server.jedbillyb.com)** - the server dashboard lives in its own repo.
+- **Faultline** - my Minecraft server, currently on Season 4. Java Edition, Paper 26.1.2, room for 69 players. Connect at `mc.jedbillyb.com`, community lives in [Discord](https://discord.jedbillyb.com).
+- **[vehiclefinder.co.nz](https://vehiclefinder.co.nz)** - NZ vehicle lookup tool, the project featured on the landing page.
+- **[server.jedbillyb.com](https://github.com/jedbillyb/server.jedbillyb.com)** - the server dashboard, in its own repo.
 
 ---
 
 ## Stack
 
 Static HTML with SCSS/CSS. No build step for the landing page.
+
+## Deploying
+
+Push to `main` and `.github/workflows/deploy.yml` copies `index.html`, `favicon.ico`, `og-image.jpg`, `assets/` and `extensions/` straight into the nginx docroot on `server.jedbillyb.com`. Nothing to build, nothing to run locally beyond opening `index.html`.
 
 ---
 
