@@ -6,12 +6,8 @@
 
 **My personal site.**
 
-[![Deploy](https://img.shields.io/badge/deployed-live-brightgreen?style=flat-square)](https://jedbillyb.com)
-[![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](./LICENSE)
-
 </div>
 
----
 
 ## Files
 
