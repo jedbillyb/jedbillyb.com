@@ -13,20 +13,26 @@
 
 ---
 
-## What's here
+## Files
 
-- **[`jedbillyb.com`](https://jedbillyb.com)** — the landing page (`index.html`). Links to my socials: email, LinkedIn, X, GitHub, Instagram, and Discord.
-- **[`jedbillyb.com/extensions/desmos-text-io`](https://jedbillyb.com/extensions/desmos-text-io)** — privacy policy for the Desmos Text I/O browser extension (`extensions/desmos-text-io/privacy.html`).
+- `index.html` - the whole page. Single screen, background image, social links.
+- `assets/sass/` - source styles. `assets/css/main.css` is the compiled output.
+- `assets/webfonts/`, `assets/*.svg`, `favicon.ico`, `og-image.jpg` - static assets.
+- `extensions/desmos-text-io/privacy.html` - privacy policy page for my Desmos browser extension.
 
-## Related
+## Running it
 
-- **[server.jedbillyb.com](https://github.com/jedbillyb/server.jedbillyb.com)** - the server dashboard lives in its own repo.
+No build step, no dependencies. Open `index.html`, or serve the folder:
 
----
+```sh
+python3 -m http.server
+```
 
-## Stack
+To change styles, edit `assets/sass/main.scss` and compile it to `assets/css/main.css` with any Sass compiler. The compiled CSS is committed, so nothing else needs to run.
 
-Static HTML with SCSS/CSS. No build step for the landing page.
+## Deploying
+
+Push to `main`. `.github/workflows/deploy.yml` copies the static files into the nginx docroot on the web server.
 
 ---
 
