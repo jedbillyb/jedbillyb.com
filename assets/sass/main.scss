@@ -3,7 +3,6 @@
 @import 'libs/mixins';
 @import 'libs/vendor';
 @import 'libs/breakpoints';
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
 @import url("fontawesome-all.min.css");
 
 /*
@@ -126,7 +125,7 @@
 
 	body {
 		background: _palette(bg);
-		overflow: hidden;
+		overflow-x: hidden;
 
 		// Stops initial animations until page loads.
 			&.is-preload {
@@ -191,10 +190,11 @@
 
 	#wrapper {
 		@include vendor('animation', 'wrapper #{_duration(wrapper)} forwards');
-		height: 100%;
+		height: 100vh;
 		left: 0;
 		opacity: 0;
-		position: fixed;
+		overflow: hidden;
+		position: relative;
 		top: 0;
 		width: 100%;
 	}
@@ -213,7 +213,7 @@
 		height: 100%;
 		left: 0;
 		opacity: 1;
-		position: fixed;
+		position: absolute;
 		top: 0;
 	}
 
@@ -228,7 +228,6 @@
 
 	#overlay {
 		@include vendor('animation', 'overlay #{_duration(overlay)} #{$delay-overlay} forwards');
-		background-attachment: fixed, fixed;
 		background-image: url('images/overlay-pattern.png'), url('images/overlay.svg');
 		background-position: top left, center center;
 		background-repeat: repeat, no-repeat;
@@ -236,7 +235,7 @@
 		height: 100%;
 		left: 0;
 		opacity: 0;
-		position: fixed;
+		position: absolute;
 		top: 0;
 		width: 100%;
 	}
@@ -246,7 +245,7 @@
 	#main {
 		height: 100%;
 		left: 0;
-		position: fixed;
+		position: absolute;
 		text-align: center;
 		top: 0;
 		width: 100%;
